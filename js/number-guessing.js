@@ -8,6 +8,9 @@ function runGame() {
     let numTries = 0;
     do {
         guessString = prompt('Guess a number between 1 and 100.\n\n');
+        if (guessString === null) {
+            return;
+        }
         guessNumber = +guessString;
         numTries += 1;
         correct = checkGuess(guessNumber, target, max, min,);
